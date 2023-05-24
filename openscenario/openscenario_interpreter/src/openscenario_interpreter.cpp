@@ -210,7 +210,8 @@ auto Interpreter::on_activate(const rclcpp_lifecycle::State &) -> Result
           record::start(
             "-a",
             "-o", boost::filesystem::path(osc_path).replace_extension("").string(),
-            "-x", "/planning/scenario_planning/lane_driving/behavior_planning/behavior_velocity_planner/debug/intersection");
+            "-x", "/planning/scenario_planning/lane_driving/behavior_planning/behavior_velocity_planner/debug/intersection"
+            "--include-unpublished-topics");
           // clang-format on
         }
 
